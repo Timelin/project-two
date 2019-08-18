@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="itcast-angularjs" />
+        <module name="magelala-common" />
+        <module name="magelala-dao" />
+        <module name="magelala-manage-web" />
+        <module name="magelala-pojo" />
+        <module name="magelala-sellergoods-interface" />
+        <module name="magelala-sellergoods-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="itcast-angularjs" target="1.5" />
+      <module name="magelala" target="1.8" />
+      <module name="magelala-common" target="1.8" />
+      <module name="magelala-dao" target="1.8" />
+      <module name="magelala-manage-web" target="1.8" />
+      <module name="magelala-pojo" target="1.8" />
+      <module name="magelala-sellergoods" target="1.8" />
+      <module name="magelala-sellergoods-interface" target="1.8" />
+      <module name="magelala-sellergoods-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

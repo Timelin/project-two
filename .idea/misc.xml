@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/itcast-angularjs" />
+    <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-manage-web" />
+    <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/magelala/pom.xml" />
+        <option value="$PROJECT_DIR$/itcast-angularjs/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
