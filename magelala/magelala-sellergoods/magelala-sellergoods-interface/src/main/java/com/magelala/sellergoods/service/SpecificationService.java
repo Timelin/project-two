@@ -6,6 +6,9 @@ import com.magelala.service.BaseService;
 import com.magelala.vo.PageResult;
 import com.magelala.vo.Specification;
 
+import java.util.List;
+import java.util.Map;
+
 public interface SpecificationService extends BaseService<TbSpecification> {
 
     //根据id查询实体类组合
@@ -21,4 +24,7 @@ public interface SpecificationService extends BaseService<TbSpecification> {
     void update(Specification specification);
 
     void deleteSpecificationByIds(Long[] ids);
+
+    List<Map<String,Object>> selectOptionList();
+
 }

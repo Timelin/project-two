@@ -10,6 +10,7 @@ import com.magelala.vo.Specification;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/specification")
 @RestController
@@ -17,6 +18,14 @@ public class SpecificationController {
 
     @Reference
     private SpecificationService specificationService;
+
+
+    /*
+     * 查询规格列表，返回的数据符合select2格式*/
+    @GetMapping("/selectOptionList")
+    public List<Map<String,Object>> selectOptionList(){
+        return specificationService.selectOptionList();
+    }
 
     //批量删除
     @GetMapping("/delete")

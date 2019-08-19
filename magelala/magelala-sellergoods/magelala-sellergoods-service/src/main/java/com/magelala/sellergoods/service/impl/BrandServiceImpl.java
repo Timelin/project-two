@@ -14,6 +14,7 @@ import tk.mybatis.mapper.entity.Example;
 
 
 import java.util.List;
+import java.util.Map;
 
 @Service(interfaceClass = BrandService.class)
 public class BrandServiceImpl  extends BaseServiceImpl<TbBrand> implements BrandService {
@@ -66,5 +67,10 @@ public class BrandServiceImpl  extends BaseServiceImpl<TbBrand> implements Brand
         PageInfo<TbBrand> pageInfo = new PageInfo<>(list);
         // 创建返回结果
         return new PageResult(pageInfo.getTotal(),pageInfo.getList());
+    }
+
+    @Override
+    public List<Map<String, Object>> selectOptionList() {
+        return brandMapper.selectOptionList();
     }
 }

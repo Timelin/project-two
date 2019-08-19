@@ -34,5 +34,21 @@ app.controller("baseController",function ($scope) {
         }
     };
 
+    $scope.jsonToString = function (jsonStrList, key) {
+        var str = "";
+        //将json字符串转换为一个json对象
+        var jsonArray = JSON.parse(jsonStrList);
+        for (var i = 0; i < jsonArray.length; i++) {
+            var obj = jsonArray[i];
+
+            if(str.length > 0){
+                str += "," + obj[key]
+            } else {
+                str = obj[key];
+            }
+        }
+
+        return str;
+    }
 
 });

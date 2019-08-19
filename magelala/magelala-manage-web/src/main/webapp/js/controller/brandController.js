@@ -72,14 +72,14 @@ app.controller(
 
         // 搜索
         // 定义一个空的搜索条件对象
-        $scope.searchEntity={};
+       /* $scope.searchEntity={};
         $scope.search=function (page, rows) {
             brandService.search($scope.searchEntity,page,rows).success(function (response) {
                 $scope.list=response.rows;
                 $scope.paginationConf.totalItems=response.total;
 
             });
-        };
+        };*/
         $scope.searchEntity={};
         $scope.search =function (page,rows) {
             brandService.search($scope.searchEntity,page,rows).success(function (response) {

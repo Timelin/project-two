@@ -17,6 +17,7 @@ app.controller("typeTemplateController", function ($scope, $controller, typeTemp
         });
     };
 
+
     $scope.save = function () {
         var object;
         if($scope.entity.id != null){//更新
@@ -74,7 +75,7 @@ app.controller("typeTemplateController", function ($scope, $controller, typeTemp
     //查询品牌列表
     $scope.brandList = {data:[]};//初始化
     $scope.findBrandList = function(){
-        brandService.selectOptionList().success(function (response) {
+        typeTemplateService.selectOptionList().success(function (response) {
             $scope.brandList.data = response;
         });
     };

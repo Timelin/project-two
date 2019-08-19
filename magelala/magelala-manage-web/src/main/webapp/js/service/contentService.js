@@ -17,6 +17,7 @@ app.service("contentService",function ($http) {
         return $http.post("../content/update.do",entity);
     };
 
+
     this.findOne = function (id) {
         return $http.get("../content/findOne.do?id=" + id);
     };

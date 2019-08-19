@@ -21,12 +21,19 @@ app.service("typeTemplateService",function ($http) {
         return $http.get("../typeTemplate/findOne.do?id=" + id);
     };
 
+
     this.delete = function (selectedIds) {
         return $http.get("../typeTemplate/delete.do?ids=" + selectedIds);
     };
 
     this.search = function (page, rows, searchEntity) {
         return $http.post("../typeTemplate/search.do?page=" + page + "&rows=" + rows, searchEntity);
+
+    };
+
+    //查询格式化的品牌数据
+    this.selectOptionList = function () {
+        return $http.get("../brand/selectOptionList.do");
 
     };
 });

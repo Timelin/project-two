@@ -18,6 +18,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @Service(interfaceClass = SpecificationService.class)
 public class SpecificationServiceImpl extends BaseServiceImpl<TbSpecification> implements SpecificationService {
@@ -27,9 +28,16 @@ public class SpecificationServiceImpl extends BaseServiceImpl<TbSpecification> i
     @Autowired
     private SpecificationOptionMapper specificationOptionMapper;
 
+    /*
+     * 查询规格列表，返回的数据符合select2格式*/
+    @Override
+    public List<Map<String, Object>> selectOptionList() {
+        return specificationMapper.selectOptionList();
+    }
+
     // 批量删除
     @Override
-    public void deleteSpecificationByIds(Long[] ids) {
+    public  void deleteSpecificationByIds(Long[] ids) {
 
         // 批量删除规格
         deleteByIds(ids);
@@ -40,6 +48,7 @@ public class SpecificationServiceImpl extends BaseServiceImpl<TbSpecification> i
         specificationOptionMapper.deleteByExample(example);
 
     }
+
 
 
     // 更新

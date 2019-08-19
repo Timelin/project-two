@@ -8,6 +8,7 @@ import com.magelala.vo.Result;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 @RequestMapping("/brand")
@@ -23,6 +24,13 @@ public class BrandController {
     public List<TbBrand> testPage(Integer page,Integer rows){
 
         return (List<TbBrand>) brandService.findPage(page,rows).getRows();
+    }
+
+    /*
+    * 查询品牌列表，返回的数据符合select2格式*/
+    @GetMapping("/selectOptionList")
+    public List<Map<String,Object>> selectOptionList(){
+        return brandService.selectOptionList();
     }
 
     /*

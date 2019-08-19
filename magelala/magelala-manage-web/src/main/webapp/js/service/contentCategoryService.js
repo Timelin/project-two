@@ -13,6 +13,7 @@ app.service("contentCategoryService",function ($http) {
         return $http.post("../contentCategory/add.do",entity);
     };
 
+
     this.update = function (entity) {
         return $http.post("../contentCategory/update.do",entity);
     };

@@ -3,4 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.magelala.mapper.SpecificationMapper">
 
+    <select id="selectOptionList" resultType="map">
+        SELECT id,spec_name as text  FROM  tb_specification
+    </select>
 </mapper>
