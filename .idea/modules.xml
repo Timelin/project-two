@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/fastdfs_client/fastdfs_client.iml" filepath="$PROJECT_DIR$/fastdfs_client/fastdfs_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/itcast-angularjs/itcast-angularjs.iml" filepath="$PROJECT_DIR$/itcast-angularjs/itcast-angularjs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-fastdfs/itcast-fastdfs.iml" filepath="$PROJECT_DIR$/itcast-fastdfs/itcast-fastdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itcast-spring-security/itcast-spring-security.iml" filepath="$PROJECT_DIR$/itcast-spring-security/itcast-spring-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala.iml" filepath="$PROJECT_DIR$/magelala/magelala.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-common/magelala-common.iml" filepath="$PROJECT_DIR$/magelala/magelala-common/magelala-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-dao/magelala-dao.iml" filepath="$PROJECT_DIR$/magelala/magelala-dao/magelala-dao.iml" />
@@ -11,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods.iml" filepath="$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-interface/magelala-sellergoods-interface.iml" filepath="$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-interface/magelala-sellergoods-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service/magelala-sellergoods-service.iml" filepath="$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service/magelala-sellergoods-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/magelala/magelala-shop-web/magelala-shop-web.iml" filepath="$PROJECT_DIR$/magelala/magelala-shop-web/magelala-shop-web.iml" />
     </modules>
   </component>
 </project>

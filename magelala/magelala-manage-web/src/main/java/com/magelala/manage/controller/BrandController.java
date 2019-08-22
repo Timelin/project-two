@@ -40,9 +40,9 @@ public class BrandController {
     public PageResult search(@RequestBody TbBrand brand,
                              @RequestParam(value = "page",defaultValue = "1")Integer page,
                              @RequestParam(value = "rows",defaultValue = "10")Integer rows){
-
         return brandService.search(brand,page,rows);
     }
+
     /*批量删除*/
     @GetMapping("/delete")
     public Result delete(Long[] ids){
