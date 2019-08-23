@@ -6,6 +6,7 @@ import com.magelala.pojo.TbSeller;
 import com.magelala.sellergoods.service.SellerService;
 import com.magelala.vo.PageResult;
 import com.magelala.vo.Result;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -76,6 +77,9 @@ public class SellerController {
 
         try {
             seller.setStatus("0");// 未审核
+            // 密码加密
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            seller.setPassword(passwordEncoder.encode(seller.getPassword()));
             sellerService.add(seller);
             return Result.ok("新增成功");
         } catch (Exception e) {
