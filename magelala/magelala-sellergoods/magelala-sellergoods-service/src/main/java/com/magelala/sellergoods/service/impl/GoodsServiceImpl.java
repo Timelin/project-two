@@ -38,6 +38,40 @@ public class GoodsServiceImpl extends BaseServiceImpl<TbGoods> implements GoodsS
     @Autowired
     private ItemMapper itemMapper;
 
+
+
+    //逻辑删除，修改字段数值
+    @Override
+    public void deleteGoodsByIds(Long[] ids) {
+
+        TbGoods goods = new TbGoods();
+        goods.setIsDelete("1");
+        Example example = new Example(TbGoods.class);
+        example.createCriteria().andIn("id",Arrays.asList(ids));
+
+
+        // 批量更新商品的删除状态为删除
+        goodsMapper.updateByExampleSelective(goods,example);
+
+    }
+
+
+    // 上架，下架
+    @Override
+    public void updateMarketable(Long[] ids, String status) {
+
+        TbGoods goods = new TbGoods();
+        goods.setIsMarketable(status);
+
+        Example example = new Example(TbGoods.class);
+        example.createCriteria().andIn("id",Arrays.asList(ids));
+        // 批量更新商品上下架的状态
+        goodsMapper.updateByExampleSelective(goods,example);
+
+    }
+
+
+    // 条件搜索
     @Override
     public PageResult search(TbGoods goods, Integer page, Integer rows) {
 
@@ -47,7 +81,13 @@ public class GoodsServiceImpl extends BaseServiceImpl<TbGoods> implements GoodsS
         // 设置分页对象
         Example example = new Example(TbGoods.class);
         Example.Criteria criteria = example.createCriteria();
-        //商品限制
+
+
+        // 不查询删除商品
+
+        criteria.andNotEqualTo("isDelete","1");
+
+        //商品限定
         if(!StringUtils.isEmpty(goods.getSellerId())){
             criteria.andEqualTo("sellerId",goods.getSellerId());
         }
@@ -139,7 +179,22 @@ public class GoodsServiceImpl extends BaseServiceImpl<TbGoods> implements GoodsS
 
         // 批量更新商品的审核状态
         goodsMapper.updateByExampleSelective(goods,example);
+
+
+        // 如果是审核通过则将SKU设置为启用状态
+        if("2".equals(status)){
+            // 更新的内容
+            TbItem item = new TbItem();
+            item.setStatus("1");
+
+            // 更新条件
+            Example itemExample = new Example(TbItem.class);
+            itemExample.createCriteria().andIn("goodsId",Arrays.asList(ids));
+            itemMapper.updateByExampleSelective(item,itemExample);
+        }
     }
+
+
 
     private void saveItemList(Goods goods) {
 

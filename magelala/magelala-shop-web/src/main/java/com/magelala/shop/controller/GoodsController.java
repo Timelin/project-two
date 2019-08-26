@@ -35,6 +35,20 @@ public class GoodsController {
     }
 
     /*
+     * 提交审核*/
+    @GetMapping("/updateMarketable")
+    public Result  updateMarketable(Long[] ids,String status){
+
+        try {
+            goodsService.updateMarketable(ids,status);
+            return Result.ok("提交成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Result.fail("提交失败！");
+
+    }
+    /*
     * 提交审核*/
     @GetMapping("/updateStatus")
     public Result  updateStatus(Long[] ids,String status){
