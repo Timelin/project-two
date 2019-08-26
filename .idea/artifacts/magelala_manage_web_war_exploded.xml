@@ -57,6 +57,9 @@
           <element id="archive" name="magelala-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="magelala-common" />
           </element>
+          <element id="archive" name="fastdfs_client-1.25.jar">
+            <element id="module-output" name="fastdfs_client" />
+          </element>
           <element id="library" level="project" name="Maven: org.apache.activemq:activemq-client:5.14.3" />
           <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" />
           <element id="library" level="project" name="Maven: org.fusesource.hawtbuf:hawtbuf:1.11" />
