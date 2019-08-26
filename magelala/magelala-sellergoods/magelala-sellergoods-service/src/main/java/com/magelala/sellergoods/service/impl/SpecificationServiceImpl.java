@@ -13,6 +13,7 @@ import com.magelala.service.impl.BaseServiceImpl;
 import com.magelala.vo.PageResult;
 import com.magelala.vo.Specification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -20,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+@Transactional
 @Service(interfaceClass = SpecificationService.class)
 public class SpecificationServiceImpl extends BaseServiceImpl<TbSpecification> implements SpecificationService {
 

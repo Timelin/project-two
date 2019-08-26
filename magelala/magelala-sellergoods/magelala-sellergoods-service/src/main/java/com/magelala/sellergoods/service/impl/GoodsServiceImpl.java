@@ -14,11 +14,14 @@ import com.magelala.vo.Goods;
 import com.magelala.vo.PageResult;
 import javafx.beans.binding.ObjectExpression;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.*;
 
+
+@Transactional
 @Service(interfaceClass = GoodsService.class)
 public class GoodsServiceImpl extends BaseServiceImpl<TbGoods> implements GoodsService {
     @Autowired
@@ -114,6 +117,9 @@ public class GoodsServiceImpl extends BaseServiceImpl<TbGoods> implements GoodsS
 
         // 1 新增商品基本信息
        goodsMapper.insertSelective(goods.getGoods());
+
+       // 测试事务回滚
+       // int i =1/0;
         // 2 新增商品描述信息
         goods.getGoodsDesc().setGoodsId(goods.getGoods().getId());
         goodsDescMapper.insertSelective(goods.getGoodsDesc());
