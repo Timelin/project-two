@@ -12,4 +12,6 @@ public class GoodsController {
     @Reference
     private GoodsService goodsService;
 
+
+
 }
