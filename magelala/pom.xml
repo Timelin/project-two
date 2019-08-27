@@ -16,6 +16,7 @@
         <module>magelala-manage-web</module>
         <module>magelala-shop-web</module>
         <module>magelala-content</module>
+        <module>magelala-portal-web</module>
     </modules>
 
 

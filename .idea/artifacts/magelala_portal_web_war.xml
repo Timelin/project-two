@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="magelala-portal-web:war">
+    <output-path>$PROJECT_DIR$/magelala/magelala-portal-web/target</output-path>
+    <root id="archive" name="magelala-portal-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="magelala-portal-web:war exploded" />
+    </root>
+  </artifact>
+</component>

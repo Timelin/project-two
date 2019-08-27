@@ -38,6 +38,29 @@ public class ContentServiceImpl extends BaseServiceImpl<TbContent>implements Con
         return new PageResult(pageInfo.getTotal(),pageInfo.getList());
 
     }
+
+    /**
+    *根据内容分类id查询启动的内容列表并降序排序
+    * @Author: Timelin
+    * @Param : categoryId
+    * @Return : List<TbContent>
+    **/
+    @Override
+    public List<TbContent> findContentListByCategoryId(Long categoryId) {
+
+        Example example = new Example(TbContent.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryId",categoryId);
+        // 启用状态的
+        criteria.andEqualTo("status","1");
+        // 降序排序
+        example.orderBy("sortOrder").desc();
+        List<TbContent> list = contentMapper.selectByExample(example);
+
+        return list;
+    }
+
+
 }
 
 
