@@ -34,8 +34,11 @@ app.controller("contentCategoryController", function ($scope, $controller, conte
     };
 
     $scope.findOne = function (id) {
+        //alert(id);
         contentCategoryService.findOne(id).success(function (response) {
+
             $scope.entity = response;
+
         });
     };
 

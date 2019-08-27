@@ -25,7 +25,6 @@
     </bean>
 
 
-
     <!--引用dubbo服务-->
     <dubbo:application name="magelala-shop-web"/>
     <dubbo:registry address="zookeeper://192.168.12.168:2181"/>

@@ -50,6 +50,7 @@
         </div>
         <div class="box-tools pull-right">
             <div class="has-feedback">
+                {{searchEntity}}
                 名称：<input ng-model="searchEntity.name" >
                 <button class="btn btn-default" ng-click="reloadList()">查询</button>
             </div>
@@ -95,11 +96,13 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h3 id="myModalLabel">内容分类编辑</h3>
+                {{entity}}[[
             </div>
             <div class="modal-body">
 
                 <table class="table table-bordered table-striped"  width="800px">
                     <tr>
+
                         <td>分类名称</td>
                         <td><input ng-model="entity.name" class="form-control" placeholder="分类名称">  </td>
                     </tr>

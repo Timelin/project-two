@@ -19,6 +19,7 @@ app.service("contentCategoryService",function ($http) {
     };
 
     this.findOne = function (id) {
+        alert(id)
         return $http.get("../contentCategory/findOne.do?id=" + id);
     };
 

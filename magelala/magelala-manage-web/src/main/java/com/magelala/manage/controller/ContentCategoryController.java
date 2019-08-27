@@ -1,29 +1,25 @@
 package com.magelala.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.magelala.content.service.ContentCategoryService;
+import com.magelala.pojo.TbContentCategory;
 import com.magelala.pojo.TbSeller;
-import com.magelala.sellergoods.service.SellerService;
 import com.magelala.vo.PageResult;
 import com.magelala.vo.Result;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-@RequestMapping("/seller")
+/**
+ * @ClassName:ContentCategoryController
+ * @Author:Timelin
+ **/
+@RequestMapping("/contentCategory")
 @RestController
-public class SellerController {
+public class ContentCategoryController {
 
     @Reference
-    private SellerService sellerService;
-
-
-    /*分页插件分页查询*/
-    @GetMapping("/testPage")
-    public List<TbSeller> testPage(Integer page, Integer rows){
-
-        return (List<TbSeller>) sellerService.findPage(page,rows).getRows();
-    }
+    private ContentCategoryService contentCategoryService;
 
 
 
@@ -31,18 +27,18 @@ public class SellerController {
      *条件搜索
      * */
     @PostMapping("/search")
-    public PageResult search(@RequestBody TbSeller seller,
+    public PageResult search(@RequestBody TbContentCategory contentCategory,
                              @RequestParam(value = "page",defaultValue = "1")Integer page,
                              @RequestParam(value = "rows",defaultValue = "10")Integer rows){
-        return sellerService.search(seller,page,rows);
+        return contentCategoryService.search(contentCategory,page,rows);
     }
 
     /*批量删除*/
     @GetMapping("/delete")
-    public Result delete(String[] ids){
+    public Result delete(Long[] ids){
 
         try {
-            sellerService.deleteByIds(ids);
+            contentCategoryService.deleteByIds(ids);
             return Result.ok("删除成功！");
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,9 +48,9 @@ public class SellerController {
 
     /*更新*/
     @PostMapping("/update")
-    public Result update(@RequestBody TbSeller seller){
+    public Result update(@RequestBody TbContentCategory contentCategory){
         try {
-            sellerService.update(seller);
+            contentCategoryService.update(contentCategory);
             return Result.ok("更新成功！");
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,18 +60,18 @@ public class SellerController {
 
     /*根据id查询*/
     @GetMapping("/findOne")
-    public  TbSeller findOne(String id){
-        return sellerService.findOne(id);
+    public  TbContentCategory findOne(long id){
+        return contentCategoryService.findOne(id);
     }
 
 
     /*新增*/
     @PostMapping("/add")
-    public Result add(@RequestBody TbSeller seller){
+    public Result add(@RequestBody TbContentCategory contentCategory){
 
         try {
-            seller.setStatus("0");// 未审核
-            sellerService.add(seller);
+
+            contentCategoryService.add(contentCategory);
             return Result.ok("新增成功");
         } catch (Exception e) {
             e.printStackTrace();
@@ -88,16 +84,15 @@ public class SellerController {
     public PageResult findPage(@RequestParam(value ="page",defaultValue = "1")Integer page,
                                @RequestParam(value = "rows",defaultValue ="10" )Integer rows) {
 
-        return  sellerService.findPage(page,rows);
+        return  contentCategoryService.findPage(page,rows);
     }
 
 
     /*查询全部*/
     @GetMapping("/findAll")
-    public List<TbSeller> findAll(){
-        return sellerService.findAll();
+    public List<TbContentCategory> findAll(){
+        return contentCategoryService.findAll();
     }
-
 
 
 }

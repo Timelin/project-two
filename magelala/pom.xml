@@ -15,6 +15,7 @@
         <module>magelala-sellergoods</module>
         <module>magelala-manage-web</module>
         <module>magelala-shop-web</module>
+        <module>magelala-content</module>
     </modules>
 
 

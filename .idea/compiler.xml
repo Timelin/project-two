@@ -11,6 +11,8 @@
         <module name="itcast-fastdfs" />
         <module name="itcast-spring-security" />
         <module name="magelala-common" />
+        <module name="magelala-content-interface" />
+        <module name="magelala-content-service" />
         <module name="magelala-dao" />
         <module name="magelala-manage-web" />
         <module name="magelala-pojo" />
@@ -26,6 +28,9 @@
       <module name="itcast-spring-security" target="1.8" />
       <module name="magelala" target="1.8" />
       <module name="magelala-common" target="1.8" />
+      <module name="magelala-content" target="1.8" />
+      <module name="magelala-content-interface" target="1.8" />
+      <module name="magelala-content-service" target="1.8" />
       <module name="magelala-dao" target="1.8" />
       <module name="magelala-manage-web" target="1.8" />
       <module name="magelala-pojo" target="1.8" />
