@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/itcast-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/fastdfs_client/pom.xml" />
         <option value="$PROJECT_DIR$/itcast-fastdfs/pom.xml" />
+        <option value="$PROJECT_DIR$/mage-solr/pom.xml" />
       </list>
     </option>
   </component>

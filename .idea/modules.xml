@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/itcast-fastdfs/itcast-fastdfs.iml" filepath="$PROJECT_DIR$/itcast-fastdfs/itcast-fastdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/itcast-spring-security/itcast-spring-security.iml" filepath="$PROJECT_DIR$/itcast-spring-security/itcast-spring-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mage-redis/mage-redis.iml" filepath="$PROJECT_DIR$/mage-redis/mage-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mage-solr/mage-solr.iml" filepath="$PROJECT_DIR$/mage-solr/mage-solr.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala.iml" filepath="$PROJECT_DIR$/magelala/magelala.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-common/magelala-common.iml" filepath="$PROJECT_DIR$/magelala/magelala-common/magelala-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-content/magelala-content.iml" filepath="$PROJECT_DIR$/magelala/magelala-content/magelala-content.iml" />
@@ -20,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-interface/magelala-sellergoods-interface.iml" filepath="$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-interface/magelala-sellergoods-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service/magelala-sellergoods-service.iml" filepath="$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service/magelala-sellergoods-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/magelala/magelala-shop-web/magelala-shop-web.iml" filepath="$PROJECT_DIR$/magelala/magelala-shop-web/magelala-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/magelala/magelala-solr-import/magelala-solr-import.iml" filepath="$PROJECT_DIR$/magelala/magelala-solr-import/magelala-solr-import.iml" />
     </modules>
   </component>
 </project>
