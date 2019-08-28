@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="fastdfs_client" />
         <module name="itcast-angularjs" />
         <module name="itcast-fastdfs" />
         <module name="itcast-spring-security" />
+        <module name="mage-redis" />
         <module name="magelala-common" />
         <module name="magelala-content-interface" />
         <module name="magelala-content-service" />
@@ -27,6 +27,7 @@
       <module name="itcast-angularjs" target="1.5" />
       <module name="itcast-fastdfs" target="1.8" />
       <module name="itcast-spring-security" target="1.8" />
+      <module name="mage-redis" target="1.8" />
       <module name="magelala" target="1.8" />
       <module name="magelala-common" target="1.8" />
       <module name="magelala-content" target="1.8" />
