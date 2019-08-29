@@ -18,6 +18,8 @@
         <module>magelala-content</module>
         <module>magelala-portal-web</module>
         <module>magelala-solr-import</module>
+        <module>magelala-search</module>
+        <module>magelala-search-web</module>
     </modules>
 
 

@@ -18,6 +18,9 @@
         <module name="magelala-manage-web" />
         <module name="magelala-pojo" />
         <module name="magelala-portal-web" />
+        <module name="magelala-search-interface" />
+        <module name="magelala-search-service" />
+        <module name="magelala-search-web" />
         <module name="magelala-sellergoods-interface" />
         <module name="magelala-sellergoods-service" />
         <module name="magelala-shop-web" />
@@ -40,6 +43,10 @@
       <module name="magelala-manage-web" target="1.8" />
       <module name="magelala-pojo" target="1.8" />
       <module name="magelala-portal-web" target="1.8" />
+      <module name="magelala-search" target="1.8" />
+      <module name="magelala-search-interface" target="1.8" />
+      <module name="magelala-search-service" target="1.8" />
+      <module name="magelala-search-web" target="1.8" />
       <module name="magelala-sellergoods" target="1.8" />
       <module name="magelala-sellergoods-interface" target="1.8" />
       <module name="magelala-sellergoods-service" target="1.8" />

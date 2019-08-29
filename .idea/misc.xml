@@ -6,6 +6,8 @@
     <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-content/magelala-content-service" />
     <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-manage-web" />
     <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-search/magelala-search-service" />
     <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-sellergoods/magelala-sellergoods-service" />
     <file type="web" url="file://$PROJECT_DIR$/magelala/magelala-shop-web" />
   </component>
